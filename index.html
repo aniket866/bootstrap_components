@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+   
+
+</head>
+<body class="">
+    <div class="bg-[#0A2540] text-[#FFD700] w-full h-full absolute brightness-110 contrast-125 saturate-150 bg-cover">
+    <nav class="  text-[#FFD700] w-full  tracking-[0.22px] py-5 ">
+        <div class=" mx-5 flex flex-row justify-between items-center">
+            <div class="ml-[20px]">
+                <a href="#home" class="inline-block ml-[5px] font-extrabold">
+                  Mark <span class="text-5xl bg-gradient-to-l from-[#f77f00] to-[#fcbf49] bg-clip-text text-transparent font-serif tracking-widest">Gary</span>
+                </a>
+              </div>  
+            <ul class="hidden md:flex flex-row gap-6 justify-end items-center text-[#FFD700]">
+                <li><a href="#" class="cursor-pointer text-white ">Education</a></li>
+                <li><a href="#" class="cursor-pointer text-white ">skills</a></li>
+                <li><a href="#" class="cursor-pointer text-white ">experience</a></li>
+                <li><a href="#" class="cursor-pointer text-white ">extra-curricular</a></li>
+                <li><a href="#" class="cursor-pointer text-white ">contact-me</a></li>
+                <li><a href="#" class="cursor-pointer text-white ">HIRE ME</a></li>
+            </ul>
+            <div class="md:hidden">
+                <div class="space-y-1 rotate-180" id="hamburger">
+                    <div class="w-6 h-0.5 transition-all bg-black"></div>
+                    <div class="w-6 h-0.5 transition-all bg-black"></div>
+                    <div class="w-6 h-0.5 transition-all bg-black"></div>
+                </div>
+                <ul class=" z-3  flex-col justify-start gap-5 h-screen absolute top-0 left-0 bg-yellow-300 p-10 items-start -translate-x-full transition-all"
+                    id="mobile-nav">
+                    <li><a href="#">Catalogue</a></li>
+                    <li><a href="#">Fashion</a></li>
+                    <li><a href="#">Favourite</a></li>
+                    <li><a href="#">Lifestyle</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="absolute inset-0 mt-[-200px] flex items-center justify-center md: ml-[-500px]">
+        <div class="text-5xl font-bold text-center d-block">Software Developer
+            
+        </div>
+    </div>
+  
+   </div>
+    <script>
+        const hamburger=document.getElementById("hamburger");
+        const mobile_nav=document.getElementById("mobile-nav");
+
+        hamburger.addEventListener('click',()=>{
+            mobile_nav.classList.toggle('-translate-x-full')
+        })
+    </script>
+    
+</body>
+</html>
